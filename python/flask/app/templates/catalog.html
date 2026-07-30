@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="/static/catalog.css">
+</head>
+<body>
+    <h1>Каталог</h1>
+    <div class="catalog">
+        {% for i in goods %}
+        <a href="/catalog/{{i.id}}">
+        <div class="tile">
+            <img src="/static/image/{{ i.image_name }}" alt="{{ i.name }}">
+            <p class="text_in_tile", style="font-size: 30px;">{{ i.name }}</p>
+            <p class="text_in_tile">{{ i.price }} руб </p>
+            <p class="text_in_tile"> {{ i.category }}</p>
+        </div>
+    </a>
+        {% endfor %}
+    </div>
+</body>
+</html>

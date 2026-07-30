@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+</head>
+<body>
+    <h1>Товары:</h1>
+    
+    <!-- ПРОВЕРКА НА ПУСТОТУ -->
+    <div th:if="${products == null}">
+        <p style="color: red;">products == null (не передано!)</p>
+    </div>
+    
+    <div th:if="${products != null and products.empty}">
+        <p style="color: orange;">БД пустая! Добавь товары.</p>
+    </div>
+    
+    <!-- ВЫВОД ТОВАРОВ -->
+    <div th:each="p : ${products}">
+        <p th:text="${p.id} + '. ' + ${p.name} + ' - ' + ${p.price} + ' руб.'"></p>
+    </div>
+    
+    <!-- ОТЛАДКА: вывести размер списка -->
+    <p th:if="${products != null}">Всего товаров: <span th:text="${products.size()}"></span></p>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ good.name }}</title>
+</head>
+<body>
+    <a href="/catalog">← Назад в каталог</a>
+    <h1>{{ good.name }}</h1>
+    
+    <!-- Везде заменили i на good -->
+    <img src="/static/image/{{ good.image_name }}" alt="{{ good.name }}" style="max-width: 300px;">
+    <p><b>Цена:</b> {{ good.price }} руб.</p>
+    <p><b>Категория:</b> {{ good.category }}</p>
+</body>
+</html>

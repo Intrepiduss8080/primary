@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Saira:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+
+.catalog {
+    text-align: center;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+}
+.tile {
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    border-radius: 8px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.text_in_tile{
+    font-size: 20px;
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+.tile img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
